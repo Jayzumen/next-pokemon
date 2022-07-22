@@ -7,6 +7,11 @@ const Layout = ({ title, children }) => {
       <Head>
         <title className='capitalize'>{title}</title>
         <link rel='icon' href='favicon.ico' />
+        <meta
+          name='viewport'
+          content='initial-scale=1.0, width=device-width'
+        />
+        <meta name='description' content='My Pokedex' />
       </Head>
       <main className='container mx-auto max-w-[1800px] min-h-screen'>
         {children}
