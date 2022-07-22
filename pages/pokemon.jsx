@@ -43,7 +43,7 @@ const pokemon = ({ mon }) => {
           </div>
 
           {/* Stats */}
-          <div className='ml-32 sm:mt-6 sm:w-[45%] mx-auto'>
+          <div className='ml-40 sm:mt-6 sm:w-[45%] mx-auto'>
             <h1 className='text-3xl text-center mb-8'>Stats</h1>
             <div>
               <table>
