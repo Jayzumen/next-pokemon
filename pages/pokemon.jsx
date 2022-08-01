@@ -24,8 +24,7 @@ const pokemon = ({ mon }) => {
                 {mon.types.map((type, index) => (
                   <p
                     key={index}
-                    className='capitalize border-2 mx-4 md:mx-10 my-2 lg:my-0 rounded-md py-2 px-8'
-                  >
+                    className='capitalize border-2 mx-4 md:mx-10 my-2 lg:my-0 rounded-md py-2 px-8'>
                     {type.type.name}
                   </p>
                 ))}
@@ -34,7 +33,7 @@ const pokemon = ({ mon }) => {
           </div>
 
           {/* Stats */}
-          <div className='p-2 sm:mt-6 xl:w-[40%] mx-auto'>
+          <div className='p-2 sm:mt-6 xl:w-[45%] mx-auto'>
             <div>
               <p className='text-3xl text-center'>Info</p>
               <div className='flex flex-col md:flex-row justify-center text-center mt-4'>
@@ -70,7 +69,7 @@ const pokemon = ({ mon }) => {
                     <tbody>
                       {mon.stats.map((stats, index) => (
                         <tr key={index}>
-                          <th className='capitalize text-left h-8 w-52 px-4'>
+                          <th className='capitalize text-left h-8 px-4'>
                             {stats.stat.name}
                           </th>
 
@@ -81,8 +80,9 @@ const pokemon = ({ mon }) => {
                             <div className='w-full bg-gray-200 rounded-full dark:bg-gray-700'>
                               <div
                                 className='bg-green-700 text-xs font-medium text-white text-center p-1 leading-none rounded-full '
-                                style={{ width: stats.base_stat * 2 }}
-                              >
+                                style={{
+                                  width: stats.base_stat * 2,
+                                }}>
                                 {" "}
                                 {stats.base_stat}
                               </div>

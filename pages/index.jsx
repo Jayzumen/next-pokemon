@@ -8,7 +8,7 @@ export default function Home({ pokemon }) {
       <h1 className='text-center text-5xl font-bold mb-4 underline text-white'>
         Pokédex
       </h1>
-      <ul className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-6 justify-between mx-2'>
+      <ul className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 justify-between mx-2'>
         {pokemon.map((mon, index) => (
           <li key={index} className='hover:scale-105 duration-300'>
             <Link href={`/pokemon?id=${index + 1}`}>
