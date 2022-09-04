@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
 import Image from "next/image";
+import GenSearch from "../components/GenSearch";
 
 export default function Home({ pokemon }) {
   return (
@@ -8,11 +9,12 @@ export default function Home({ pokemon }) {
       <h1 className='text-center text-5xl font-bold mb-4 underline text-white'>
         Pokédex
       </h1>
-      <ul className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 justify-between mx-2'>
+      {/* <GenSearch /> */}
+      <ul className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 justify-between mx-4'>
         {pokemon.map((mon, index) => (
           <li key={index} className='hover:scale-105 duration-300'>
             <Link href={`/pokemon?id=${index + 1}`}>
-              <a className='border p-4 border-gray m-2 capitalize flex items-center text-lg rounded-md bg-gray-300 shadow-lg shadow-gray-700'>
+              <a className='border p-4 border-gray m-4 capitalize flex items-center text-lg rounded-md bg-gray-300 shadow-lg shadow-gray-700'>
                 <Image
                   width={"96"}
                   height={"96"}
