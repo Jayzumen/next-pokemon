@@ -1,7 +1,6 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
 import Image from "next/image";
-import GenSearch from "../components/GenSearch";
 
 export default function Home({ pokemon }) {
   return (
@@ -21,9 +20,7 @@ export default function Home({ pokemon }) {
                   src={mon.image}
                   alt={mon.name}
                 />
-                <span className='mr-2'>
-                  #{("00" + (index + 1)).slice(-3)}
-                </span>
+                <span className='mr-2'>#{("00" + (index + 1)).slice(-3)}</span>
                 <p className='font-bold'>{mon.name}</p>
               </a>
             </Link>
@@ -36,9 +33,7 @@ export default function Home({ pokemon }) {
 
 export async function getStaticProps(context) {
   try {
-    const res = await fetch(
-      "https://pokeapi.co/api/v2/pokemon?limit=151"
-    );
+    const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=151");
     const { results } = await res.json();
     const pokemon = results.map((result, index) => {
       const paddedIndex = ("00" + (index + 1)).slice(-3);
@@ -53,3 +48,4 @@ export async function getStaticProps(context) {
     console.error(err);
   }
 }
+
